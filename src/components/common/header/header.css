@@ -106,8 +106,22 @@ header .toggle {
     padding: 0;
   }
 
+  /* Adjust the logo for mobile view */
   header .logo img {
-    margin-top: 30px;
+    width: 50px; /* Reduce size for mobile */
+    margin: 0; /* Remove extra margin */
+  }
+
+  header .logo-text {
+    font-size: 18px; /* Adjust text size for mobile */
+  }
+
+  /* Ensure the flex container aligns properly */
+  header .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px; /* Add some padding for better spacing */
   }
 
   header .button {
@@ -139,29 +153,31 @@ header .toggle {
   }
 }
 
-/* Dropdown menu */
+/* Update for dropdown behavior on mobile */
 .nav-item {
   position: relative;
-}
-
-.nav-item:hover .dropdown {
-  display: block; /* Show dropdown on hover */
+  cursor: pointer;
 }
 
 .dropdown {
-  display: none; /* Initially hidden */
+  display: none;
+}
+
+.nav-item:hover .dropdown,
+.nav-item .open + .dropdown {
+  display: block;
   position: absolute;
-  top: 100%;
-  background-color: #48008b;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  padding: 1px;
-  border-radius: 5px;
+  background-color: #4e2a84;
+  padding: 10px 0;
+  top: 100%; /* Position below the nav item */
+  left: 0;
   z-index: 1000;
-  width: 200px;
+  width: 200px; /* Adjust width based on your preference */
 }
 
 .dropdown li {
   list-style: none;
+  margin: 0;
 }
 
 .dropdown li a {
@@ -169,11 +185,28 @@ header .toggle {
   padding: 10px 16px;
   color: white;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .dropdown li a:hover {
   background-color: #4e2a84;
   color: #e71c7a;
+}
+
+/* For the mobile menu, make sure the submenu items are visible */
+@media screen and (max-width: 768px) {
+  header .small {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    background-color: #4e2a84;
+    padding: 20px;
+  }
+
+  .dropdown {
+    display: block; /* Show dropdown items when clicked */
+  }
 }
 
 .fa-caret-down {

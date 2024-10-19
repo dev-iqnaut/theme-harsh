@@ -29,7 +29,6 @@ const Hero = () => {
             title="Welcome to Our School"
             subtitle="Discover your path to success with our innovative learning experience."
           />
-          <button className="btn-primary">Get Started</button>
         </div>
       </div>
     </section>

@@ -60,7 +60,7 @@ const Academics = () => {
                     <ul className="admissions-document-list">
                         {admission.documentList && admission.documentList.map((docName, index) => (
                             <li key={index} className="admissions-document-item">
-                                <a href={admission.feeStructure || "#"} download className="pink-btn">{docName}</a>
+                                <a href={admission.feeStructure || "#"} download>{docName}</a>
                             </li>
                         ))}
                     </ul>

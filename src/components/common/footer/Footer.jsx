@@ -19,27 +19,28 @@ const Footer = () => {
 
     return () => unsubscribe(); // Cleanup listener on unmount
   }, []);
-  
+
   const footData = footerData?.siteData?.ContactUs || {};
   const schoolDetails = footerData?.siteData?.Home?.schoolDetails || {};
   const aboutData = footerData?.siteData?.['About-Us'] || {};
+  const cbseCompliance = footerData?.siteData?.CBSECompliance || {}; // Ensure CBSECompliance exists
 
   return (
     <footer>
       <div className='container padding'>
         {/* Logo and description */}
         <div className='box logo'>
-          <img src={schoolDetails.schoolLogo} alt="School Logo" className="school-logo" /> {/* Add logo image */}
+          <img src={schoolDetails.schoolLogo} alt="School Logo" className="school-logo" />
           <h1>{schoolDetails.schoolName}</h1>
           <span>{aboutData.focus}</span>
           <p>{aboutData.mission}</p>
 
           {/* Social Media Icons */}
           <div className='social-icons'>
-          <a href={footData.facebook_link}><i className='fab fa-facebook-f icon'></i></a>
-          <a href={footData.twitter_link}><i className='fab fa-twitter icon'></i></a>
-          <a href="https://instagram.com"><i className='fab fa-instagram icon'></i></a>
-          <a href="https://youtube.com"><i className='fab fa-youtube icon'></i></a>
+            <a href={footData.facebook_link}><i className='fab fa-facebook-f icon'></i></a>
+            <a href={footData.twitter_link}><i className='fab fa-twitter icon'></i></a>
+            <a href="https://instagram.com"><i className='fab fa-instagram icon'></i></a>
+            <a href="https://youtube.com"><i className='fab fa-youtube icon'></i></a>
           </div>
         </div>
 
@@ -62,6 +63,10 @@ const Footer = () => {
             <li><a href="/contact">Contact Us</a></li>
             <li><a href="/faq">FAQ</a></li>
             <li><a href="/">Parent Community</a></li>
+            {/* Use safe access to CBSECompliance properties */}
+            <li><a href={cbseCompliance.annual_report} target="_blank" rel="noopener noreferrer">Annual Report</a></li>
+            <li><a href={cbseCompliance.cbse_affiliation} target="_blank" rel="noopener noreferrer">CBSE Affiliation</a></li>
+            <li><a href={cbseCompliance.mandatory_public_disclosure} target="_blank" rel="noopener noreferrer">Mandatory Public Disclosure</a></li>
           </ul>
         </div>
 
@@ -72,7 +77,6 @@ const Footer = () => {
             <li><i className="fa fa-clock"></i>{footData.opening_hours}</li>
             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
           </ul>
-          {/* Join Us Now Button */}
           <button className="join-us">Join Us Now</button>
         </div>
       </div>

@@ -7,38 +7,40 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [navList, setNavList] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
-  const [aboutData, setAboutData] = useState({}); // State to hold all data
+  const [activeDropdown, setActiveDropdown] = useState(null); // Track which dropdown is active
+  const [aboutData, setAboutData] = useState({});
 
   // Fetch data from Firestore
   useEffect(() => {
     const docRef = doc(db, "sites", "www.educator.in");
     const unsubscribe = onSnapshot(docRef, (doc) => {
       if (doc.exists()) {
-        setAboutData(doc.data()); // Set all data from Firestore
+        setAboutData(doc.data());
       } else {
         console.log("No such document!");
       }
     });
 
-    return () => unsubscribe(); // Cleanup listener on unmount
+    return () => unsubscribe();
   }, []);
 
   // Safely access the nested data
   const contactData = aboutData?.siteData?.ContactUs || {};
   const schoolDetails = aboutData?.siteData?.Home?.schoolDetails || {};
 
-  const handleToggleDropdown = (hasSubmenu) => {
+  // Toggle dropdown based on index to handle multiple submenus
+  const handleToggleDropdown = (index, hasSubmenu) => {
+    // Only toggle the dropdown if the menu item has a submenu
     if (hasSubmenu) {
-      setDropdown((prev) => !prev);
-    } else {
-      setDropdown(false);
+      setActiveDropdown((prev) => (prev === index ? null : index));
     }
   };
 
-  const handleLinkClick = () => {
-    setDropdown(false); // Close dropdown when a link is clicked
-    setNavList(false); // Close mobile nav when a link is clicked (optional)
+  const handleLinkClick = (hasSubmenu) => {
+    if (!hasSubmenu) {
+      setNavList(false); // Close mobile nav when a link is clicked if it's not a dropdown
+      setActiveDropdown(null); // Close any open dropdowns when a link is clicked
+    }
   };
 
   return (
@@ -70,26 +72,20 @@ const Header = () => {
               <li
                 key={index}
                 className="nav-item"
-                onMouseEnter={() => handleToggleDropdown(list.submenu)}
-                onMouseLeave={() => setDropdown(false)}
+                onClick={() => handleToggleDropdown(index, list.submenu)} // Toggle dropdown if it has submenu
               >
                 <Link
                   to={list.path}
-                  onClick={() => {
-                    handleLinkClick();
-                    if (list.submenu) {
-                      handleToggleDropdown(list.submenu);
-                    }
-                  }}
+                  onClick={() => handleLinkClick(list.submenu)} // Pass the condition for submenu
                 >
                   {list.text}
-                  {list.submenu && <i className="fa fa-caret-down"></i>}
+                  {list.submenu && <i className={`fa fa-caret-down ${activeDropdown === index ? "open" : ""}`}></i>}
                 </Link>
-                {dropdown && list.submenu && (
+                {activeDropdown === index && list.submenu && (
                   <ul className="dropdown">
                     {list.submenu.map((submenuItem, submenuIndex) => (
                       <li key={submenuIndex}>
-                        <Link to={submenuItem.path} onClick={handleLinkClick}>
+                        <Link to={submenuItem.path} onClick={() => handleLinkClick(false)}>
                           {submenuItem.text}
                         </Link>
                       </li>

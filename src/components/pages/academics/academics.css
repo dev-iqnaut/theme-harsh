@@ -9,7 +9,7 @@
 
 .academics-btn-group {
     margin-top: 10px;
-    display: flex; /* Use flexbox for alignment */
+    display: flex;
     justify-content: center; /* Center the buttons */
 }
 
@@ -19,22 +19,34 @@
     padding: 12px 25px;
     border-radius: 8px;
     text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s; /* Add transform for effect */
-    display: inline-block; /* Center align button */
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
 }
 
 .pink-btn:hover {
-    background-color: #e6007e; /* Darker pink on hover */
-    transform: scale(1.05); /* Slightly enlarge button */
+    background-color: #e6007e;
+    transform: scale(1.05);
 }
 
 .admissions-document-list {
     list-style-type: none;
     padding: 0;
+    text-align: center; /* Center the list */
 }
 
 .admissions-document-item {
     margin-bottom: 15px;
+}
+
+.admissions-document-item a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+}
+
+.admissions-document-item a:hover {
+    text-decoration: underline;
+    color: #ff4d94; /* Add hover effect */
 }
 
 @media (max-width: 768px) {

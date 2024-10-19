@@ -94,16 +94,32 @@
     background-color: #cd2068;
   }
   
-  /* Responsive layout */
-  @media (max-width: 800px) {
-    .content {
-      flex-direction: column;
-    }
-  
-    .contact-info,
-    .contact-form {
-      margin-right: 0;
-      margin-bottom: 20px;
-    }
+  /* Fully responsive styles */
+@media (max-width: 768px) {
+  .contact .container {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 20px;
   }
-  
+
+  .content {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-group {
+    flex-direction: column;
+  }
+
+  .primary-btn {
+    padding: 12px;
+  }
+}

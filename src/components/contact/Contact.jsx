@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { doc, onSnapshot } from "firebase/firestore"; 
+import { db } from "../../config/Firebase";
 import img from "../../images/about-us.png";
 import Back from "../common/Back";
 import "./contact.css";
 
 const Contact = () => {
+  const [contactInfo, setContactInfo] = useState({});
+
   const mapSrc =
     "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d904726.6131739549!2d85.24565535!3d27.65273865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1652535615693!5m2!1sen!2snp";
+
+      // Fetch data from Firestore
+      useEffect(() => {
+        const docRef = doc(db, "sites", "www.educator.in");
+        const unsubscribe = onSnapshot(docRef, (doc) => {
+            if (doc.exists()) {
+              setContactInfo(doc.data());
+            } else {
+                console.log("No such document!");
+            }
+        });
+
+        return () => unsubscribe(); // Cleanup listener on unmount
+    }, []);
+
+    const contact = contactInfo?.siteData?.ContactUs || {};
 
   return (
     <>
@@ -30,15 +50,19 @@ const Contact = () => {
               <h4>Contact Information</h4>
               <div className="info-item">
                 <i className="fa fa-map-marker"></i>
-                <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+                <p>{contact.location}</p>
               </div>
               <div className="info-item">
                 <i className="fa fa-envelope"></i>
-                <p>info@yoursite.com</p>
+                <p>{contact.email}</p>
               </div>
               <div className="info-item">
                 <i className="fa fa-phone"></i>
-                <p>+1235 2355 98</p>
+                <p>{contact.phone_number}</p>
+              </div>
+              <div className="info-item">
+                <i className="fa fa-clock"></i>
+                <p>Opening Hours: {contact.opening_hours} AM - 5 PM</p>
               </div>
             </div>
 
