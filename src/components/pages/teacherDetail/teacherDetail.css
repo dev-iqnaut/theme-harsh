@@ -1,0 +1,107 @@
+/* Teacher Detail Main Section */
+.teacher-detail {
+    display: flex;
+    gap: 50px;
+    padding: 60px 0;
+    width: 100%;
+    max-width: 90%;
+    /* Limit the maximum width for better alignment */
+    margin: 0 auto;
+    /* Center the content horizontally */
+}
+
+.teacher-detail .left {
+    flex: 1;
+}
+
+.teacher-detail .teacher-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.teacher-detail .right {
+    flex: 2;
+}
+
+.teacher-detail h2 {
+    font-size: 32px;
+    color: #2d3954;
+    margin-bottom: 10px;
+}
+
+.teacher-detail h4 {
+    font-size: 22px;
+    color: #e71c7a;
+    margin-bottom: 20px;
+}
+
+.teacher-detail .bio {
+    font-size: 16px;
+    color: #72809d;
+    margin-bottom: 20px;
+}
+
+.teacher-detail blockquote {
+    font-style: italic;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: #f7f9fc;
+    border-left: 5px solid #e71c7a;
+}
+
+.teacher-detail ul {
+    margin: 20px 0;
+}
+
+.teacher-detail ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Stats or Progress Bars */
+.teacher-stats {
+    margin: 50px 0;
+    max-width: 90%;
+    margin: 40px auto 0;
+}
+
+.stats-box {
+    margin-bottom: 30px;
+}
+
+.stats-box h4 {
+    font-size: 18px;
+    color: #2d3954;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background-color: #eee;
+    border-radius: 5px;
+    width: 100%;
+    height: 10px;
+}
+
+.progress-bar .progress {
+    background-color: #e71c7a;
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+    .teacher-detail {
+        flex-direction: column;
+        max-width: 95%;
+        /* Slightly wider for mobile */
+    }
+
+    .teacher-detail .left {
+        margin-bottom: 30px;
+    }
+
+    .teacher-stats {
+        max-width: 95%;
+        /* Adjust stats for mobile */
+    }
+}

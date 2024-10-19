@@ -1,0 +1,49 @@
+.academics-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.academics-row {
+    margin-bottom: 30px;
+}
+
+.academics-btn-group {
+    margin-top: 10px;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the buttons */
+}
+
+.pink-btn {
+    background-color: #ff4d94; /* Pink color */
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s; /* Add transform for effect */
+    display: inline-block; /* Center align button */
+}
+
+.pink-btn:hover {
+    background-color: #e6007e; /* Darker pink on hover */
+    transform: scale(1.05); /* Slightly enlarge button */
+}
+
+.admissions-document-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.admissions-document-item {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .academics-container {
+        padding: 10px;
+    }
+
+    .pink-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

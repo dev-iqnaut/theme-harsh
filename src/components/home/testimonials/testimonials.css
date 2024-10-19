@@ -1,0 +1,78 @@
+.testimonials {
+  padding: 60px 0;
+  background-color: #f7f9fc;
+}
+
+.testimonials-list {
+  display: flex;
+  flex-wrap: wrap; /* Allow the testimonials to wrap on smaller screens */
+  justify-content: space-between;
+  gap: 20px; /* Adds consistent space between testimonial items */
+}
+
+.testimonial-item {
+  background-color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  flex: 1 1 calc(50% - 20px); /* Each item takes up 50% of the container on larger screens */
+  max-width: calc(50% - 20px); /* Prevents overflow */
+  box-sizing: border-box;
+}
+
+.testimonial-item:hover {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.testimonial-feedback {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonial-item h3 {
+  color: #2d3954;
+  font-size: 18px;
+}
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 1024px) {
+  .testimonial-item {
+    flex: 1 1 calc(50% - 20px); /* 2 columns for medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .testimonial-item {
+    flex: 1 1 100%; /* 1 column for small screens */
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .testimonials {
+    padding: 40px 10px; /* Adjust padding for smaller screens */
+  }
+
+  .testimonial-img {
+    width: 80px; /* Smaller image for mobile */
+    height: 80px;
+  }
+
+  .testimonial-item h3 {
+    font-size: 16px; /* Adjust heading size */
+  }
+
+  .testimonial-feedback {
+    font-size: 14px; /* Adjust feedback font size for smaller screens */
+  }
+}

@@ -1,0 +1,89 @@
+/* Styling for the Testimonials section */
+.testimonials .card {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s ease;
+    height: 100%;
+  }
+  
+  .testimonials .testimonial-text {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .testimonials .testimonial-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align content to the right */
+  }
+  
+  .testimonials .name {
+    margin-right: 20px;
+    text-align: right; /* Align name and designation to the right */
+  }
+  
+  .testimonials .name h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .testimonials .name span {
+    color: #e71c7a;
+    font-size: 14px;
+  }
+  
+  .testimonials .img {
+    position: relative;
+  }
+  
+  .testimonials img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  
+  .testimonials i {
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    background-color: #e71c7a;
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  
+  /* Hover effects */
+  .testimonials .card:hover {
+    background-color: #e71c7a;
+    color: #fff;
+  }
+  
+  .testimonials .card:hover .name span,
+  .testimonials .card:hover .testimonial-text {
+    color: #fff;
+  }
+  
+  .testimonials .card:hover i {
+    background-color: #fff;
+    color: #e71c7a;
+  }
+  
+  .testimonials .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .testimonials .content {
+      grid-template-columns: 1fr;
+    }
+  }
+  

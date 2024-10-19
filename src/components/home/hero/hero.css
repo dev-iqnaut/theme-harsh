@@ -1,0 +1,73 @@
+.hero {
+  position: relative; /* Allows absolute positioning of the overlay */
+  background-image: url("../../../../public/images/banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  width: 100%;
+}
+
+.hero::before {
+  content: ""; /* Necessary to create the overlay */
+  position: absolute; /* Absolute positioning to cover the entire hero section */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(10, 10, 10, 0.5); /* Gray color with transparency */
+  z-index: 1; /* Ensure it stays above the background image */
+}
+
+.hero .container {
+  position: relative; /* Keep it above the overlay */
+  z-index: 2; /* Ensure content is above the overlay */
+  padding-top: 15%;
+  display: flex; /* Add flexbox for easy centering */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  flex-direction: column; /* Stack elements vertically */
+  text-align: center; /* Center text */
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 60px;
+  margin-bottom: 20px; /* Add space between the heading and the text */
+}
+
+.hero p {
+  color: #fff;
+  opacity: 0.8;
+  margin-bottom: 30px; /* Add space between the paragraph and the button */
+}
+
+.hero .btn-primary {
+  padding: 10px 30px;
+  background-color: #e71c7a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero .btn-primary:hover {
+  background-color: #c01462; /* Darken the button on hover */
+}
+
+@media screen and (max-width: 800px) {
+  .hero .container {
+    padding-top: 30%;
+  }
+
+  .hero h1 {
+    font-size: 40px; /* Reduce the font size on smaller screens */
+  }
+
+  .hero .btn-primary {
+    padding: 8px 25px; /* Adjust button padding for small screens */
+    font-size: 16px;
+  }
+}

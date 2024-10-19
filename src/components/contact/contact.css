@@ -1,0 +1,109 @@
+/* Main container styling */
+.contact .container {
+    max-width: 80%;
+  }
+  
+  /* Add space above the map */
+  .map-container {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 50px; /* Added margin to create space from the top */
+  }
+  
+  /* Content styling */
+  .content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Contact info styling */
+  .contact-info {
+    flex: 1;
+    margin-right: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  .contact-info h4 {
+    margin-bottom: 20px;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .info-item i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #333;
+  }
+  
+  .info-item p {
+    font-size: 18px;
+  }
+  
+  /* Contact form styling */
+  .contact-form {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  
+  .contact-form h4 {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .form-group input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+  }
+  
+  /* Make the submit button cover the full width */
+  .primary-btn {
+    width: 100%; /* Ensures the button spans the full width of the form */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .primary-btn:hover {
+    background-color: #cd2068;
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 800px) {
+    .content {
+      flex-direction: column;
+    }
+  
+    .contact-info,
+    .contact-form {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  

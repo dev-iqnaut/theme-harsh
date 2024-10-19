@@ -1,0 +1,15 @@
+.school-details {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .school-logo {
+    max-width: 200px;
+    height: auto;
+  }
+  
+  .school-details h1 {
+    margin-top: 15px;
+    font-size: 2.5rem;
+  }
+  
