@@ -1,1 +1,1 @@
-![My Image](my-image.png)
+![My Image](02_home.png)
