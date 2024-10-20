@@ -10,11 +10,11 @@ The project is live! Check it out [here](<https://educator-bfa7e.web.app/>).
 
 ### Desktop View
 
-![Desktop View](./images/desktop-view.png)
+![Desktop View](./images/view/d.png)
 
 ### Mobile View
 
-![Mobile View](./images/mobile-view.png)
+![Mobile View](./images/view/m.png)
 
 ---
 
