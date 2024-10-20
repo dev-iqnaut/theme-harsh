@@ -4,7 +4,7 @@ This project is a responsive **Educator Website** built using **ReactJS** and **
 
 ## 🚀 Deployed Link
 
-The project is live! Check it out [here](<add_your_deployed_link_here>).
+The project is live! Check it out [here](<https://educator-bfa7e.web.app/>).
 
 ## 🖼️ Screenshots
 
