@@ -1,20 +1,37 @@
+/* Container styling */
 .academics-container {
     max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
-.academics-row {
-    margin-bottom: 30px;
+/* Card styling */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 20px;
 }
 
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Button group styling */
 .academics-btn-group {
     margin-top: 10px;
     display: flex;
-    justify-content: center; /* Center the buttons */
+    justify-content: center;
 }
 
+/* Button styling */
 .pink-btn {
-    background-color: #ff4d94; /* Pink color */
+    background-color: #ff4d94;
     color: #ffffff;
     padding: 12px 25px;
     border-radius: 8px;
@@ -28,30 +45,30 @@
     transform: scale(1.05);
 }
 
+/* Admissions document list styling */
 .admissions-document-list {
     list-style-type: none;
     padding: 0;
-    text-align: center; /* Center the list */
+    text-align: center;
 }
 
 .admissions-document-item {
     margin-bottom: 15px;
-}
-
-.admissions-document-item a {
-    text-decoration: none;
     font-size: 16px;
     color: #333;
 }
 
-.admissions-document-item a:hover {
+/* Hover effect for document items */
+.admissions-document-item:hover {
     text-decoration: underline;
-    color: #ff4d94; /* Add hover effect */
+    color: #ff4d94;
 }
 
+/* Responsive design */
 @media (max-width: 768px) {
     .academics-container {
         padding: 10px;
+        grid-template-columns: 1fr;
     }
 
     .pink-btn {

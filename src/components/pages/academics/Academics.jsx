@@ -19,10 +19,11 @@ const Academics = () => {
                 console.log("No such document!");
             }
         });
-
+        
         return () => unsubscribe(); // Cleanup listener on unmount
     }, []);
-
+    
+    console.log(academicsData);
     const academic = academicsData?.siteData?.Academics || {};
     const admission = academicsData?.siteData?.Admissions || {};
 
@@ -31,7 +32,7 @@ const Academics = () => {
             <Back name="Academics" title="Academics - Academic Information" cover={img} />
             <div className="academics-container">
                 {/* Academic Calendar */}
-                <div className="academics-row">
+                <div className="academics-row card">
                     <Heading title="Academic Calendar" subtitle="View the annual academic schedule" />
                     <div className="academics-btn-group">
                         <a href={academic.academic_calendar || "#"} target="_blank" rel="noopener noreferrer" className="pink-btn">View Academic Calendar</a>
@@ -39,7 +40,7 @@ const Academics = () => {
                 </div>
 
                 {/* Exam Schedule */}
-                <div className="academics-row">
+                <div className="academics-row card">
                     <Heading title="Exam Schedule" subtitle="Check upcoming exams and schedules" />
                     <div className="academics-btn-group">
                         <a href={academic.exam_schedule || "#"} target="_blank" rel="noopener noreferrer" className="pink-btn">View Exam Schedule</a>
@@ -47,7 +48,7 @@ const Academics = () => {
                 </div>
 
                 {/* Fee Structure */}
-                <div className="academics-row">
+                <div className="academics-row card">
                     <Heading title="Fee Structure" subtitle="Get detailed information on fees" />
                     <div className="academics-btn-group">
                         <a href={admission.feeStructure || "#"} download className="pink-btn">Download Fee Structure</a>
@@ -55,12 +56,12 @@ const Academics = () => {
                 </div>
 
                 {/* Admissions Document List */}
-                <div className="academics-row">
+                <div className="academics-row card">
                     <Heading title="Admissions Documents" subtitle="Important documents related to admissions" />
                     <ul className="admissions-document-list">
                         {admission.documentList && admission.documentList.map((docName, index) => (
                             <li key={index} className="admissions-document-item">
-                                <a href={admission.feeStructure || "#"} download>{docName}</a>
+                                {docName}
                             </li>
                         ))}
                     </ul>
