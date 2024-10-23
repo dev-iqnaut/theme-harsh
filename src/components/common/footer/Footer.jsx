@@ -23,7 +23,7 @@ const Footer = () => {
   const footData = footerData?.siteData?.ContactUs || {};
   const schoolDetails = footerData?.siteData?.Home?.schoolDetails || {};
   const aboutData = footerData?.siteData?.['About-Us'] || {};
-  const cbseCompliance = footerData?.siteData?.CBSECompliance || {}; // Ensure CBSECompliance exists
+  const cbseCompliance = footerData?.siteData?.CBSECompliance || {};
 
   return (
     <footer>

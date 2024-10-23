@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link for navigation
 import "./testimonials.css";
 
 const testimonialsData = [
@@ -12,6 +13,7 @@ const testimonialsData = [
     feedback: "I love the interactive sessions and the structured courses. Highly recommended!",
     image: "images/testimonials/t2.jpg",
   },
+  // Add more testimonials if needed
 ];
 
 const Testimonials = () => {
@@ -28,6 +30,10 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
+        {/* More Reviews Button */}
+        <Link to="/testimonials" className="more-reviews-button">
+          More Reviews
+        </Link>
       </div>
     </section>
   );

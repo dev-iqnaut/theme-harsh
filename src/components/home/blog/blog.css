@@ -52,6 +52,10 @@
   font-size: 12px;
 }
 
+.mblogs{
+  text-align: center;
+}
+
 @media screen and (max-width: 1024px) {
   .blog-item {
     flex: 1 1 calc(48% - 20px);

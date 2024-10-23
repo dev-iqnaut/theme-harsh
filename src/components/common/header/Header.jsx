@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "../../../config/Firebase";
 import './header.css';
-import { nav } from '../../data/Data';
+import { nav } from '../../data/dummydata';
 import { Link } from 'react-router-dom';
 
 const Header = () => {

@@ -1,5 +1,6 @@
 import React from "react";
 import "./blog.css";
+import { Link } from "react-router-dom"; // Import Link for navigation
 
 const blogPosts = [
   {
@@ -39,6 +40,11 @@ const Blog = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div className="mblogs">
+      <Link to="/blogs" className="more-reviews-button">
+          More Blogs
+        </Link>
       </div>
     </section>
   );

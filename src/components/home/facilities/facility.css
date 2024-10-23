@@ -1,0 +1,133 @@
+.facility-section {
+    position: relative;
+    overflow: hidden;
+    padding: 60px 0;
+  }
+  
+  /* Facility Container */
+  .facility-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Facility Header */
+  .facility-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .facility-title {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .facility-view-all-button {
+    background-color: #ff0077;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .facility-view-all-button:hover {
+    background-color: #c2185b;
+  }
+  
+  /* Facility Grid */
+  .facility-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .facility-card {
+    flex: 0 1 calc(33.333% - 20px);
+    margin: 10px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .facility-icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+  }
+  
+  .facility-card-title {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .facility-card-description {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Stats Section */
+  .fstats-container {
+    position: absolute;
+    top: 30%; /* Adjust as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+    padding: 20px; /* Add padding for better spacing */
+  }
+  
+  .fstats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping */
+    margin-top: 20px;
+  }
+  
+  .fstat-item {
+    text-align: center;
+    flex: 1 1 calc(25% - 20px); /* Responsive flex item */
+    margin: 10px; /* Margin for spacing */
+    min-width: 200px; /* Minimum width for better alignment */
+  }
+  
+  .fstat-item h3 {
+    color: #fff;
+  }
+  
+  .fstat-item p {
+    color: #e71c7a;
+  }
+  
+  /* Responsive Breakpoints */
+  @media screen and (max-width: 1024px) {
+    .facility-card {
+      flex: 1 1 calc(50% - 20px); /* Adjust for two columns on medium screens */
+    }
+  
+    .fstats-container {
+      top: 16%; /* Adjust position on smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .facility-card {
+      flex: 1 1 100%; /* 1 column on small screens */
+    }
+  
+    .fstat-item {
+      flex: 1 1 calc(50% - 20px); /* Two stats per row on small screens */
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .facility-section {
+      padding: 40px 10px; /* Adjust padding for smaller screens */
+    }
+  }
+  

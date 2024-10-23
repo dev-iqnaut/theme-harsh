@@ -4,7 +4,7 @@ import { db } from "../../config/Firebase";
 import "./about.css";
 import Back from "../common/Back";
 import Heading from "../common/Heading";
-import img from "../../images/up.jpg"; // Your cover image
+import img from "../../images/up.jpg";
 
 const About = () => {
   const [aboutData, setAboutData] = useState({});
@@ -20,7 +20,7 @@ const About = () => {
       }
     });
 
-    return () => unsubscribe(); // Cleanup listener on unmount
+    return () => unsubscribe();
   }, []);
 
   // Safely access the nested data
@@ -52,9 +52,8 @@ const About = () => {
             {/* Principal's Message Section */}
             {principalData?.principal_image && principalData?.principal_message ? (
               <>
-                {/* Fix the whitespace issue in the URL */}
                 <img
-                  src={principalData.principal_image} // Ensure no extra whitespace in URL
+                  src={principalData.principal_image}
                   alt="Principal"
                 />
                 <p>{principalData.principal_message}</p>

@@ -1,8 +1,8 @@
 import React from "react";
-import Back from "../common/Back"; // Assuming the Back component is for the header section
-import { blog } from "../data/dummydata"; // Importing the blog data
-import './blog.css'; // Import the blog styling
-import img from "../../images/about-us.png"; // Import a cover image
+import Back from "../common/Back";
+import { blog } from "../data/dummydata";
+import './blog.css';
+import img from "../../images/about-us.png";
 
 const Blog = () => {
   return (

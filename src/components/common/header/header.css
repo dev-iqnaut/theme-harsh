@@ -204,6 +204,10 @@ header .toggle {
     padding: 20px;
   }
 
+  header .logo-text {
+    padding-left: 10px;
+  }
+
   .dropdown {
     display: block; /* Show dropdown items when clicked */
   }

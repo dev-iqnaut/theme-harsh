@@ -6,6 +6,7 @@ import Categories from "./categories/Categories"
 import Teachers from "./teachers/Teachers"
 import Testimonials from "./testimonials/Testimonials"
 import Blog from "./blog/Blog"
+import Facility from "./facilities/Facility";
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
         <Carousel />
         <SchoolDetails />
         <Categories />
+        <Facility />
         <Teachers />
         <Testimonials />
         <Blog />
