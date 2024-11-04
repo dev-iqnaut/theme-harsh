@@ -23,7 +23,7 @@ const useInfrastructureData = () => {
     
     const unsubscribe = onSnapshot(docRef, (doc) => {
       if (doc.exists()) {
-        const infrastructureData = doc.data()?.siteData?.Infrastructure || {};
+        const infrastructureData = doc.data()?.siteData?.infrastructure || {};
         setInfrastructure(infrastructureData);
       } else {
         console.log("No such document!");

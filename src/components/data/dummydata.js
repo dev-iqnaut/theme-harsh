@@ -6,11 +6,14 @@ export const nav = [
   {
     text: "about",
     path: "/about",
+    submenu: [
+      { text: 'academics', path: '/academics'},
+      { text: 'school info', path: '/students' },
+    ],
   },
   {
     text: "pages",
     submenu: [
-      { text: 'academics', path: '/academics' },
       { text: 'teachers', path: '/teachers' },
       { text: 'gallery', path: '/gallery' },
       { text: 'infrastructure', path: '/infrastructure' },
@@ -18,6 +21,7 @@ export const nav = [
       { text: 'faq', path: '/faq' },
       { text: 'testimonials', path: '/testimonials' },
       { text: 'facilities', path: '/facility' },
+      { text: 'parents corner', path: '/parents' },
     ],
   },
   {

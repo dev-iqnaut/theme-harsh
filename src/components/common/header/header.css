@@ -193,26 +193,91 @@ header .toggle {
   color: #e71c7a;
 }
 
-/* For the mobile menu, make sure the submenu items are visible */
+/* Ensure the navigation is fully visible and scrollable on mobile */
 @media screen and (max-width: 768px) {
   header .small {
     position: absolute;
-    top: 10vh;
+    top: 10vh; /* Push down below the header */
     left: 0;
     width: 100%;
     background-color: #4e2a84;
     padding: 20px;
+    max-height: 80vh; /* Limit height to ensure it doesn't cover the entire screen */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    z-index: 999; /* Ensure the menu appears above other elements */
   }
 
   header .logo-text {
     padding-left: 10px;
   }
 
+  /* Ensure nav items have enough padding for touch */
+  .nav-item a {
+    padding: 12px 10px; /* Larger padding for better touch experience */
+    font-size: 16px;
+    color: #fff; /* Set white text for better contrast against the background */
+    display: block;
+    width: 100%;
+  }
+
+  /* Dropdown styling */
   .dropdown {
-    display: block; /* Show dropdown items when clicked */
+    position: relative;
+    max-height: 200px; /* Limit dropdown height */
+    overflow-y: auto; /* Allow dropdown scrolling if needed */
+    background-color: #f8f8f8; /* Light background for contrast */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px; /* Small spacing between main menu and dropdown */
+  }
+
+  /* Style dropdown links */
+  .dropdown ul li a {
+    font-size: 14px;
+    color: #333; /* Darker text for readability */
+    padding: 8px;
+    display: block;
+  }
+
+  /* Dropdown caret rotation when open */
+  .fa-caret-down {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+  }
+
+  /* Rotate caret when dropdown is open */
+  .fa-caret-down.open {
+    transform: rotate(180deg);
   }
 }
 
+/* Further adjustments for very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  header .small {
+    padding: 15px;
+    max-height: 70vh; /* Reduce height slightly for very small screens */
+  }
+
+  /* Dropdown tweaks for very small screens */
+  .dropdown {
+    max-height: 150px;
+    padding: 8px;
+  }
+
+  .dropdown ul li a {
+    font-size: 13px;
+    padding: 6px; /* Smaller padding for tight spaces */
+  }
+
+  /* Slightly smaller padding for main menu items */
+  .nav-item a {
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
+/* Adjust the caret icon for dropdowns */
 .fa-caret-down {
   margin-left: 5px;
+  transition: transform 0.3s ease-in-out; /* Smooth rotation of caret */
 }

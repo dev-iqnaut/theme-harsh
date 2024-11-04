@@ -11,7 +11,7 @@ const SchoolDetails = () => {
     const docRef = doc(db, "sites", "www.educator.in");
     const unsubscribe = onSnapshot(docRef, (doc) => {
       if (doc.exists()) {
-        setSchoolDetails(doc.data()?.siteData?.Home?.schoolDetails || {}); // Fetch school details
+        setSchoolDetails(doc.data()?.siteData?.home?.schoolDetails || {}); // Fetch school details
       } else {
         console.log("No such document!");
       }

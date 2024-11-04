@@ -15,6 +15,8 @@ import TeacherDetail from "./teacherDetail/TeacherDetail";
 import NewsEvents from "./news/NewsEvents";
 import Academics from "./academics/Academics";
 import Facility from "./facility/Facility";
+import ParentsCorner from "./parentsCorner/ParentsCorner";
+import SchoolInfo from "./schoolInfo/SchoolInfo";
 
 const Pages = () => {
   return (
@@ -34,6 +36,8 @@ const Pages = () => {
       <Route exact path='/blog' element={<Blog />} />
       <Route exact path='/academics' element={<Academics />} />
       <Route exact path='/facility' element={<Facility />} />
+      <Route exact path='/parents' element={<ParentsCorner />} />
+      <Route exact path='/students' element={<SchoolInfo />} />
       </Routes>
       <Footer />
     </Router>

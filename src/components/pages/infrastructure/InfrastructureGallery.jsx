@@ -29,17 +29,17 @@ const InfrastructureGallery = () => {
 
   return (
     <section className="infrastructure">
-      {renderGallerySection("Art Rooms", infrastructure.art_rooms)}
-      {renderGallerySection("Assembly Area", infrastructure.assembly_area)}
+      {renderGallerySection("Art Rooms", infrastructure.artRooms)}
+      {renderGallerySection("Assembly Area", infrastructure.assemblyArea)}
       {renderGallerySection("Auditorium", infrastructure.auditorium)}
       {renderGallerySection("Clinic", infrastructure.clinic)}
       {renderGallerySection("Hostels", infrastructure.hostels)}
       {renderGallerySection("Laboratories", infrastructure.laboratories)}
       {renderGallerySection("Libraries", infrastructure.libraries)}
-      {renderGallerySection("Presentation Halls", infrastructure.presentation_halls)}
-      {renderGallerySection("School Blocks", infrastructure.school_blocks)}
-      {renderGallerySection("School Reception", infrastructure.school_reception)}
-      {renderGallerySection("Sports Ground", infrastructure.sports_ground)}
+      {renderGallerySection("Presentation Halls", infrastructure.presentationHalls)}
+      {renderGallerySection("School Blocks", infrastructure.schoolBlocks)}
+      {renderGallerySection("School Reception", infrastructure.schoolReception)}
+      {renderGallerySection("Sports Ground", infrastructure.sportsGround)}
     </section>
   );
 };

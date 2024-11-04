@@ -1,187 +1,318 @@
-/* Overall FAQ Section Layout */
 .faq-section {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px 0;
-    background-color: #f9f9f9;
-  }
-  
-  .faq-section .container {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    width: 100%;
-    max-width: 80%;
-    margin: 0 auto;
-  }
-  
-  /* Left Section: FAQ Dropdowns and Image with Bubble */
-  .faq-left {
-    width: 40%;
-  }
-  
-  .faq-left h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .faq-list {
-    margin-bottom: 30px;
-  }
-  
-  .faq-item {
-    margin-bottom: 15px;
-  }
-  
-  .faq-question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-size: 18px;
-    padding: 10px;
-    background-color: #e71c7a;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .faq-question:hover {
-    background-color: #c0155e;
-  }
-  
-  .faq-answer {
-    padding: 10px;
-    background-color: white;
-    border-left: 3px solid #e71c7a;
-    margin-top: 5px;
-    color: #555;
-  }
-  
-  /* Image and Bubble Section */
-  .faq-image-section {
-    margin-top: 40px;
-    position: relative;
-  }
-  
-  .faq-image-section img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  .faq-bubble {
-    position: absolute;
-    bottom: -30px;
-    left: 20px;
-    background-color: white;
-    padding: 10px 15px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .faq-bubble p {
-    font-size: 16px;
-    color: #555;
-    margin: 0;
-  }
-  
-  /* Right Section: Form and Benefits */
-  .faq-right {
-    width: 55%;
-  }
-  
-  .faq-right h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  /* FAQ Form */
-  .faq-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .faq-form label {
-    margin-bottom: 5px;
-    font-size: 16px;
-    color: #333;
-  }
-  
-  .faq-form input,
-  .faq-form textarea {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 100%;
-    color: #333;
-  }
-  
-  .faq-form textarea {
-    height: 100px;
-  }
-  
-  .faq-form button {
-    padding: 10px 20px;
-    background-color: #e71c7a;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .faq-form button:hover {
-    background-color: #c0155e;
-  }
-  
-  /* Benefits Section with Dropdown */
-  .benefits-list {
-    margin-top: 30px;
-  }
-  
-  .benefit-item {
-    margin-bottom: 15px;
-  }
-  
-  .benefit-question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-size: 18px;
-    padding: 10px;
-    background-color: #0077b6;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .benefit-question:hover {
-    background-color: #005f8a;
-  }
-  
-  .benefit-answer {
-    padding: 10px;
-    background-color: white;
-    border-left: 3px solid #0077b6;
-    margin-top: 5px;
-    color: #555;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0; /* Reduced padding */
+}
+
+.faq-section .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; /* Reduced gap */
+  width: 100%;
+  max-width: 80%; /* Slightly narrower */
+  margin: 0 auto;
+}
+
+/* Left Section: FAQ Dropdowns and Image with Bubble */
+.faq-left {
+  width: 42%;
+}
+
+.faq-left h2 {
+  font-size: 24px; /* Reduced title size */
+  margin-bottom: 20px;
+  color: #000000;
+  font-weight: bold; /* Normal font weight */
+}
+
+.faq-list {
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px; /* Reduced font size */
+  padding: 12px; /* Reduced padding */
+  background-color: #5e1eb5;
+  color: white;
+  border-radius: 6px; /* Slightly smaller radius */
+  transition: background-color 0.3s ease;
+  font-weight: 400; /* Removed bold */
+}
+
+.faq-question:hover {
+  background-color: #7d2ae8;
+}
+
+.faq-answer {
+  padding: 12px;
+  background-color: white;
+  border-left: 3px solid #7d2ae8;
+  margin-top: 8px;
+  color: #555;
+  font-size: 15px; /* Smaller answer font */
+  line-height: 1.4; /* Adjusted line-height */
+  border-radius: 5px;
+}
+
+/* Image and Bubble Section */
+.faq-image-section {
+  margin-top: 35px; /* Reduced margin */
+  position: relative;
+}
+
+.faq-image-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Slightly smaller radius */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.faq-bubble {
+  position: absolute;
+  bottom: -20px;
+  left: 15px;
+  background-color: white;
+  padding: 12px 15px; /* Smaller padding */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-bubble p {
+  font-size: 16px; /* Slightly smaller text */
+  color: #333;
+  margin: 0;
+  font-weight: 400; /* No bold */
+}
+
+/* Right Section: Form and Benefits */
+.faq-right {
+  width: 50%;
+}
+
+.faq-right h2 {
+  font-size: 24px; /* Reduced title size */
+  margin-bottom: 20px;
+  color: #000000;
+  font-weight: bold; /* Normal weight */
+}
+
+/* FAQ Form */
+.faq-form {
+  display: flex;
+  flex-direction: column;
+  padding: 18px; /* Reduced padding */
+  background-color: white;
+  border-radius: 8px; /* Smaller radius */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 35px; /* Reduced margin */
+}
+
+.faq-form label {
+  margin-bottom: 8px;
+  font-size: 15px; /* Smaller label font */
+  font-weight: 400;
+  color: #333;
+}
+
+.faq-form input,
+.faq-form textarea {
+  padding: 10px; /* Smaller input padding */
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 15px; /* Reduced input font size */
+  width: 100%;
+  color: #555;
+  background-color: #f9f9f9;
+}
+
+.faq-form textarea {
+  height: 100px;
+}
+
+.faq-form button {
+  padding: 10px 20px; /* Smaller button padding */
+  background-color: #e71c7a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Slightly smaller button font */
+  font-weight: 400; /* Normal weight */
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.faq-form button:hover {
+  background-color: #c0155e;
+}
+
+/* Benefits Section with Dropdown */
+.benefits-list {
+  margin-top: 25px; /* Reduced margin */
+}
+
+.benefit-item {
+  margin-bottom: 15px;
+}
+
+.benefit-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px; /* Reduced font size */
+  padding: 12px;
+  background-color: #e71c7a;
+  color: white;
+  border-radius: 6px; /* Slightly smaller radius */
+  transition: background-color 0.3s ease;
+  font-weight: 400; /* Removed bold */
+}
+
+.benefit-question:hover {
+  background-color: #c0155e;
+}
+
+.benefit-answer {
+  padding: 12px;
+  background-color: white;
+  border-left: 3px solid #e71c7a;
+  margin-top: 8px;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.4;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .faq-section {
       flex-direction: column;
+      padding: 25px 10px; /* Reduced padding for smaller screens */
     }
   
     .faq-left, .faq-right {
       width: 100%;
     }
-  }
+    
+    .container {
+      gap: 20px; /* Reduced gap */
+      padding: 0 10px; /* Added padding to sides */
+    }
   
+    .faq-question,
+    .benefit-question {
+      font-size: 16px; /* Slightly smaller text for mobile */
+      padding: 10px;
+    }
+
+    .faq-answer,
+    .benefit-answer {
+      font-size: 14px; /* Reduced answer font size */
+      padding: 10px;
+    }
+
+    .faq-form input,
+    .faq-form textarea {
+      font-size: 14px;
+      padding: 8px;
+    }
+
+    .faq-form button {
+      padding: 8px 15px;
+      font-size: 14px; /* Smaller button text */
+    }
+}
+  
+@media (max-width: 480px) {
+    .faq-section {
+      padding: 20px 5px; /* Further reduced padding for small devices */
+    }
+
+    .faq-left h2, 
+    .faq-right h2 {
+      font-size: 20px; /* Reduce heading size */
+    }
+
+    .faq-question,
+    .benefit-question {
+      font-size: 15px;
+      padding: 8px; /* Compact padding for mobile */
+    }
+
+    .faq-answer,
+    .benefit-answer {
+      font-size: 13px; /* Further reduce answer font */
+      padding: 8px; /* Smaller padding */
+    }
+
+    .faq-bubble {
+      padding: 8px 10px; /* Smaller bubble */
+      font-size: 13px;
+    }
+
+    .faq-image-section {
+      margin-top: 20px; /* Smaller margin on image */
+    }
+
+    .faq-image-section img {
+      width: 95%; /* Reduced width for small screens */
+    }
+
+    .faq-form input,
+    .faq-form textarea {
+      font-size: 13px;
+      padding: 6px; /* Smaller padding for inputs */
+    }
+
+    .faq-form button {
+      padding: 6px 10px; /* Compact button for small devices */
+      font-size: 13px;
+    }
+
+    .container {
+      padding: 0 5px; /* Narrower side padding */
+    }
+}
+
+@media (max-width: 360px) {
+    .faq-section {
+      padding: 15px 5px;
+    }
+  
+    .faq-question,
+    .benefit-question {
+      font-size: 14px; /* Even smaller text */
+      padding: 6px;
+    }
+
+    .faq-answer,
+    .benefit-answer {
+      font-size: 12px; /* Compact font for very small devices */
+    }
+
+    .faq-form input,
+    .faq-form textarea {
+      font-size: 12px; /* Smaller form input font */
+      padding: 5px; /* Compact form fields */
+    }
+
+    .faq-form button {
+      padding: 5px 8px; /* Further reduced button size */
+      font-size: 12px; /* Button font size */
+    }
+
+    .faq-bubble {
+      font-size: 12px;
+      padding: 6px;
+    }
+}

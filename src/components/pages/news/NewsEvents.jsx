@@ -13,11 +13,11 @@ const NewsEvents = () => {
     const docRef = doc(db, "sites", "www.educator.in");
     const unsubscribe = onSnapshot(docRef, (doc) => {
       if (doc.exists()) {
-        const data = doc.data()?.siteData?.["News-Events"] || {};
+        const data = doc.data()?.siteData?.newsEvents || {};
         setNewsEvents({
           announcements: data.announcement || [],
           news: data.news || [],
-          headerAnnouncement: data.header_announcement[0]?.announcement || 'News & Events', // Default to "News & Events" if not available
+          headerAnnouncement: data.headerAnnouncement[0]?.announcement || 'News & Events', // Default to "News & Events" if not available
         });
       } else {
         console.log("No such document!");

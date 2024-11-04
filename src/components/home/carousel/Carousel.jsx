@@ -12,7 +12,7 @@ const Carousel = () => {
     const docRef = doc(db, "sites", "www.educator.in");
     const unsubscribe = onSnapshot(docRef, (doc) => {
       if (doc.exists()) {
-        setCarouselData(doc.data()?.siteData?.Home?.carousel || []); // Fetch carousel data
+        setCarouselData(doc.data()?.siteData?.home?.carousel || []); // Fetch carousel data
       } else {
         console.log("No such document!");
       }

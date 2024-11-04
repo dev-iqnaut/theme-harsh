@@ -12,7 +12,7 @@ const Hero = () => {
     const docRef = doc(db, "sites", "www.educator.in");
     const unsubscribe = onSnapshot(docRef, (doc) => {
       if (doc.exists()) {
-        setHeroData(doc.data()?.siteData?.Home?.hero || {}); // Fetch hero data from Firestore
+        setHeroData(doc.data()?.siteData?.home?.hero || {}); // Fetch hero data from Firestore
       } else {
         console.log("No such document!");
       }

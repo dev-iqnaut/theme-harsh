@@ -25,8 +25,8 @@ const Header = () => {
   }, []);
 
   // Safely access the nested data
-  const contactData = aboutData?.siteData?.ContactUs || {};
-  const schoolDetails = aboutData?.siteData?.Home?.schoolDetails || {};
+  const contactData = aboutData?.siteData?.contactUs || {};
+  const schoolDetails = aboutData?.siteData?.home?.schoolDetails || {};
 
   // Toggle dropdown based on index to handle multiple submenus
   const handleToggleDropdown = (index, hasSubmenu) => {
@@ -47,16 +47,16 @@ const Header = () => {
     <>
       <div className="top-bar">
         <div className="top-bar-left">
-          <span><i className="fa fa-phone"></i> {contactData.phone_number || "N/A"}</span>
+          <span><i className="fa fa-phone"></i> {contactData.phoneNumber || "N/A"}</span>
           <span><i className="fa fa-envelope"></i> {contactData.email || "N/A"}</span>
           <span><i className="fa fa-map-marker"></i> {contactData.location || "N/A"}</span>
         </div>
         <div className="top-bar-right">
-          <a href={contactData.facebook_link} target="_blank" rel="noreferrer"><i className="fab fa-facebook"></i></a>
-          <a href={contactData.twitter_link} target="_blank" rel="noreferrer"><i className="fab fa-twitter"></i></a>
+          <a href={contactData.facebookLink} target="_blank" rel="noreferrer"><i className="fab fa-facebook"></i></a>
+          <a href={contactData.twitterLink} target="_blank" rel="noreferrer"><i className="fab fa-twitter"></i></a>
           <a href="https://youtube.com" target="_blank" rel="noreferrer"><i className="fab fa-youtube"></i></a>
           <a href="https://instagram.com" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a>
-          <a href={contactData.linkedin_link} target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
+          <a href={contactData.linkedinLink} target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
           <a href="https://google.com" target="_blank" rel="noreferrer"><i className="fa fa-search icon"></i></a>
         </div>
       </div>

@@ -19,13 +19,26 @@ const Academics = () => {
                 console.log("No such document!");
             }
         });
-        
+
         return () => unsubscribe(); // Cleanup listener on unmount
     }, []);
-    
-    console.log(academicsData);
-    const academic = academicsData?.siteData?.Academics || {};
-    const admission = academicsData?.siteData?.Admissions || {};
+
+    const academic = academicsData?.siteData?.academics || {};
+    const admission = academicsData?.siteData?.admissions || {};
+    const academicResources = academicsData?.siteData?.academicResources || {}; // Assume this structure is fetched
+
+    // Define the desired order of grades
+    const gradeOrder = [
+        "Nursery", "KG1", "KG2",
+        "1st", "2nd", "5th", "6th",
+        "12th"
+    ];
+
+    // Sort academic resources based on the defined order
+    const sortedAcademicResources = gradeOrder.map(grade => ({
+        grade,
+        resource: academicResources[grade]
+    }));
 
     return (
         <section className="academics-section">
@@ -35,7 +48,7 @@ const Academics = () => {
                 <div className="academics-row card">
                     <Heading title="Academic Calendar" subtitle="View the annual academic schedule" />
                     <div className="academics-btn-group">
-                        <a href={academic.academic_calendar || "#"} target="_blank" rel="noopener noreferrer" className="pink-btn">View Academic Calendar</a>
+                        <a href={academic.academicCalendar || "#"} target="_blank" rel="noopener noreferrer" className="pink-btn">View Academic Calendar</a>
                     </div>
                 </div>
 
@@ -43,7 +56,7 @@ const Academics = () => {
                 <div className="academics-row card">
                     <Heading title="Exam Schedule" subtitle="Check upcoming exams and schedules" />
                     <div className="academics-btn-group">
-                        <a href={academic.exam_schedule || "#"} target="_blank" rel="noopener noreferrer" className="pink-btn">View Exam Schedule</a>
+                        <a href={academic.examSchedule || "#"} target="_blank" rel="noopener noreferrer" className="pink-btn">View Exam Schedule</a>
                     </div>
                 </div>
 
@@ -62,6 +75,18 @@ const Academics = () => {
                         {admission.documentList && admission.documentList.map((docName, index) => (
                             <li key={index} className="admissions-document-item">
                                 {docName}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                {/* Academic Resources Section */}
+                <div className="academics-row card">
+                    <Heading title="Academic Resources" subtitle="Resources for each grade level" />
+                    <ul className="academic-resources-list">
+                        {sortedAcademicResources.map(({ grade, resource }, index) => (
+                            <li key={index} className="academic-resource-item">
+                                <strong>{grade}:</strong> {resource}
                             </li>
                         ))}
                     </ul>

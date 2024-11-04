@@ -24,8 +24,8 @@ const About = () => {
   }, []);
 
   // Safely access the nested data
-  const aboutUsData = aboutData?.siteData?.['About-Us'] || {};
-  const principalData = aboutUsData?.principal_message || {};  // Principal data (object containing image and message)
+  const aboutUsData = aboutData?.siteData?.aboutUs || {};
+  const principalData = aboutUsData?.principalMessage || {};  // Principal data (object containing image and message)
 
   return (
     <>
@@ -42,7 +42,7 @@ const About = () => {
             />
 
             <p>{aboutUsData.focus || "Loading..."}</p>
-            <p>{aboutUsData.school_history || "Loading..."}</p>
+            <p>{aboutUsData.schoolHistory || "Loading..."}</p>
             <p>{aboutUsData.vision || "Loading..."}</p>
             <button className="btn2">More About Us</button>
           </div>
@@ -50,13 +50,13 @@ const About = () => {
           {/* Right Side Content */}
           <div className="right row">
             {/* Principal's Message Section */}
-            {principalData?.principal_image && principalData?.principal_message ? (
+            {principalData?.principalImage && principalData?.principalMessage ? (
               <>
                 <img
-                  src={principalData.principal_image}
+                  src={principalData.principalImage}
                   alt="Principal"
                 />
-                <p>{principalData.principal_message}</p>
+                <p>{principalData.principalMessage}</p>
               </>
             ) : (
               <p>Loading principal's message...</p>

@@ -42,7 +42,7 @@ const Blog = () => {
         </div>
       </div>
       <div className="mblogs">
-      <Link to="/blogs" className="more-reviews-button">
+      <Link to="/blog" className="more-reviews-button">
           More Blogs
         </Link>
       </div>

@@ -25,7 +25,7 @@ const Contact = () => {
         return () => unsubscribe(); // Cleanup listener on unmount
     }, []);
 
-    const contact = contactInfo?.siteData?.ContactUs || {};
+    const contact = contactInfo?.siteData?.contactUs || {};
 
   return (
     <>
@@ -58,11 +58,11 @@ const Contact = () => {
               </div>
               <div className="info-item">
                 <i className="fa fa-phone"></i>
-                <p>{contact.phone_number}</p>
+                <p>{contact.phoneNumber}</p>
               </div>
               <div className="info-item">
                 <i className="fa fa-clock"></i>
-                <p>Opening Hours: {contact.opening_hours} AM - 5 PM</p>
+                <p>Opening Hours: {contact.openingHours} AM - 5 PM</p>
               </div>
             </div>
 
