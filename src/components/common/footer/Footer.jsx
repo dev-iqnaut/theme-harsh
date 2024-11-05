@@ -67,7 +67,7 @@ const Footer = () => {
             {/* Use safe access to CBSECompliance properties */}
             <li><a href={cbseCompliance.annualReport} target="_blank" rel="noopener noreferrer">Annual Report</a></li>
             <li><a href={cbseCompliance.cbseAffiliation} target="_blank" rel="noopener noreferrer">CBSE Affiliation</a></li>
-            <li><a href={cbseCompliance.mandatoryPublicdisclosure} target="_blank" rel="noopener noreferrer">Mandatory Public Disclosure</a></li>
+            <li><a href={cbseCompliance.mandatoryPublicDisclosure} target="_blank" rel="noopener noreferrer">Mandatory Public Disclosure</a></li>
           </ul>
         </div>
 

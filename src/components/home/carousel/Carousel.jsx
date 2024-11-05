@@ -61,7 +61,7 @@ const Carousel = () => {
               {item.title && <h2 className="carousel-title">{item.title}</h2>}
               {item.buttonUrl && item.buttonText && (
                 <a href={item.buttonUrl} className="btn-primary">
-                  {item.buttonText}
+                  {item.buttonText} {item.title}
                 </a>
               )}
             </div>

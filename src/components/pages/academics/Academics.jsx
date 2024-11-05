@@ -29,7 +29,7 @@ const Academics = () => {
 
     // Define the desired order of grades
     const gradeOrder = [
-        "Nursery", "KG1", "KG2",
+        "nursery", "KG1", "KG2",
         "1st", "2nd", "5th", "6th",
         "12th"
     ];

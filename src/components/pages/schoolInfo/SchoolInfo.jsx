@@ -58,7 +58,7 @@ const SchoolInfo = () => {
                 <div className="school-info-row card">
                     <Heading title="Co-Curricular Activities" subtitle="Engaging activities outside the classroom" />
                     <div className="co-curricular-content">
-                        {studentCorner.cocurricular || "Content not available"}
+                        {studentCorner.coCurricular || "Content not available"}
                     </div>
                 </div>
 

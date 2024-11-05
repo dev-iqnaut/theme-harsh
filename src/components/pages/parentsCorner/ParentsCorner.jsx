@@ -18,7 +18,7 @@ const ParentsCorner = () => {
       (doc) => {
         if (doc.exists()) {
           const data = doc.data()?.siteData?.parentsCorner;
-          setContent(data?.content || "");
+          setContent(data?.Content || "");
         } else {
           console.log("No such document in Firestore!");
         }
